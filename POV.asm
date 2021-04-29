@@ -1,16 +1,15 @@
 .include"m8535def.inc"
-.def aux = r16
-.def data =r17
-ldi aux,low(RAMEND)
-out spl,aux
-ldi aux,high(RAMEND)
-out sph,aux
-ser aux
-out ddra,aux
-out portb, aux
-out ddrc,aux
+.def data =r16
+ldi data,low(RAMEND)
+out spl,data
+ldi data,high(RAMEND)
+out sph,data
+ser data
+out ddra,data
+out portb, data
+out ddrc,data
 
-
+	ldi r20,$3F
 	ldi r21,$06
 	ldi r22,$5b
 	ldi r23,$4f
